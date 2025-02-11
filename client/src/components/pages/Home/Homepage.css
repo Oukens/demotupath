@@ -1,0 +1,359 @@
+/* Main Container */
+
+.Homepage-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #F4F2EE;
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  flex-direction: row; /* Ensure items are in a row */
+  background-color: #F4F2EE;
+  margin-top: 50px; /* Accounts for the header height */
+  overflow-y: auto; /* Enable scrolling for the content container */
+  height: calc(100vh - 50px); /* Make it fill the remaining height */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 380px;
+  left: 0;
+  height: calc(100vh - 10px);
+  background-color: #F4F2EE;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 320px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.profile img {
+  width: 50px; /* Set the width */
+  height: 50px; /* Match height to width for a perfect circle */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensures the image fits and doesn't stretch */
+}
+
+
+
+.profile h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.profile p {
+  font-size: 12px;
+  line-height: 20px;
+  opacity: 0.6;
+}
+
+/* Complete Section */
+.complete-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.complete-section h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.add-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-btn-container button {
+  background: none;
+  width: 180px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-btn-container button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Feed */
+.feed {
+  padding: 50px 20px;
+  width: calc(60% - 200px);
+  height: calc(100vh - 50px); /* Make the feed fill the height below the header */
+}
+
+/* Post Styles */
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 15px;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden; /* Prevent overflow */
+  position: relative; /* Position relative for absolute elements */
+}
+
+/* Post Input */
+.post-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 15px;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+
+}
+.post-input img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the height matches the container */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-input .postinputimg-container {
+  width: 55px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex; /* Optional: Center the image */
+  align-items: center; /* Optional: Center the image */
+  justify-content: center; /* Optional: Center the image */
+}
+
+/* Subpost Input */
+.subpost-input {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subpost-input input {
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.subpost-input input::placeholder {
+  color: lightgray;
+}
+
+.subpost-input button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+  padding: 5px;
+  color: #419bfa;
+}
+
+.subpost-input button img {
+  width: 20px;
+  opacity: 0.5;
+
+}
+
+/* Top Post Content Section */
+.toppostcontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This ensures space between the elements */
+  gap: 10px; /* Optional: Adds spacing between elements */
+}
+
+.topleftpostcontent{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toppostcontent img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits nicely without distortion */
+  flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.frompost {
+  line-height: 1.2;
+}
+
+.frompost p {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.editdots-container {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.editdots-container img{
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* Post Text */
+.postcontent {
+  word-wrap: break-word; /* Ensure long words wrap properly */
+  overflow-wrap: break-word; /* Modern alternative for word wrapping */
+  overflow: hidden; /* Prevent any visual overflow */
+  white-space: normal; /* Allow text wrapping */
+  max-width: 100%; /* Ensure it doesn't exceed parent container */
+  flex-shrink: 1; /* Allow shrinking to fit within the container */
+  display: inline-block; /* Ensure it's treated as a block of text */
+  word-break: break-word; /* Break long unbroken words properly */
+}
+
+.postcontent p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.postcontent .postcontenttxtareacontainer input{
+  display: flex;
+  width: 100%;
+  border: none; /* Default border */
+  outline: none;         /* Remove the outline when focused */
+  transition: border 0.3s; /* Smooth transition for border changes */
+  padding: 10px;
+}
+
+.postcontent .postcontenttxtareacontainer textarea{
+  display: flex;
+  width: 100%;
+  border:none; /* Default border */
+  outline: none;         /* Remove the outline when focused */
+  transition: border 0.3s; /* Smooth transition for border changes */
+  padding: 10px;
+}
+.postcontent .postcontenttxtareacontainer textarea:focus{
+  border: none;
+}
+.postcontent .editbuttonpostcontainer{
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.editbuttonscontainer{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.editbuttonpostcontainer img{
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+}
+.editbuttonpostcontainer .editbuttonscontainer button{
+  width: 60px;
+  border: none;
+  padding: 5px;
+  background:none;
+
+}
+
+.editbuttonpostcontainer .editbuttonscontainer button:hover{
+  background-color: #f0f0f0;
+}
+
+/* Post Image */
+.postimagecontent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.post-image{
+  width: 100%;
+  height: auto;
+}
+
+.postimagecontent img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Post Buttons */
+.downpostcontent {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.downpostcontent button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: #888;
+}
+
+.downpostcontent button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    padding: 15px;
+  }
+
+  .feed {
+    margin-left: 0;
+    width: 100%;
+  }
+}

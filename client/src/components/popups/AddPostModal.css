@@ -1,0 +1,118 @@
+/* Modal Overlay */
+.AddPostModalmodal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+
+  }
+  
+  /* Modal Content */
+.AddPostModalmodal-content {
+  position: relative;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  max-width: 600px; /* Max width for the modal */
+  height:  500px;
+  overflow: hidden;
+}
+
+.addpostmodalsubcontent{
+  overflow: auto;
+  height: 100%;
+  width: auto;
+  padding-bottom: 30px;
+}
+  
+  .AddPostModalmodal-content h6 {
+    font-size: 12px;
+    font-weight: light;
+    color: #9D0E0F;
+    border-bottom: 0.1px solid #d2c7c7;
+    padding-bottom: 10px;
+  }
+ /* Textarea */
+.AddPostModalmodal-content textarea {
+  width: 100%;
+  height: 300px;
+  padding: 10px; /* Increased padding for better spacing */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical; /* Allows users to resize the textarea vertically */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+/* Placeholder styling */
+.AddPostModalmodal-content textarea::placeholder {
+  color: #aaa; /* Light color for the placeholder */
+}
+
+  /* Image Preview */
+.AddPostModalmodal-content .image-preview {
+  margin-top: 10px;
+  width: 100%; /* Make the image preview container take full width of the parent */
+  height: 300px; /* You can adjust the height according to your preference */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  overflow: hidden; /* Hide any part of the image that overflows */
+  border-radius: 8px; /* Optional, to round corners */
+}
+
+/* Image inside preview */
+.AddPostModalmodal-content .image-preview img {
+  max-width: 100%; /* Make sure the image doesn't overflow */
+  height: 100%; /* Make the image fill the height of the container */
+  object-fit: contain; /* Ensures image is contained within the box */
+  border-radius: 8px; /* Optional, to round image corners */
+}
+  
+  /* Post Buttons */
+  .AddPostModalmodal-content .postbuttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000000000;
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    bottom: 45px;
+    left:382px;
+    padding: 10px;
+  }
+
+  .AddPostModalmodal-content .postbuttons .postbuttonadd{
+    display: flex;
+    gap: 10px;
+  }
+  
+  .AddPostModalmodal-content .postbuttons button {
+    background: none;
+    border: none;
+  }
+  
+  .AddPostModalmodal-content .postbuttons .postbtn {
+    background-color: #9D0E0F;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    width: 50px;
+    font-weight: light;
+  }
+  
+  .AddPostModalmodal-content label img{
+    width: 25px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+

@@ -1,0 +1,190 @@
+/* Comment Section */
+.comments-section {
+  margin-top: 10px;
+  
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  font-size: 12px;
+  height: auto;
+}
+
+/* Comment Input */
+.comment-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 12px;
+  gap: 10px;
+  overflow: auto;
+
+}
+
+.comment-input textarea {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-wrap: wrap;
+  overflow: auto; /* Prevent scrollbars */
+}
+
+
+.comment-input input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Rounded corners for input */
+}
+
+.comment-profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Comment */
+.comment {
+  display:flex;
+  width: auto; /* Full width */
+  gap: 10px;
+  
+}
+
+.comment .commentprofilediv{
+  width: 5%;
+}
+
+
+.comment div {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  line-height:10px;
+  max-width: 100%; /* Prevent the content from exceeding parent width */
+}
+
+.comment div .commentsubs{
+  padding: 15px 5px 10px 5px;
+  margin-bottom: 3px;
+  border-radius: 20px;
+  width:100%;
+  background-color: rgb(244, 244, 244);
+}
+
+.commentsubs .usernametopcontainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.usernametopcontainer img{
+  width: 15px;
+  height: 15px;
+  position:sticky;
+  margin-right: 10px;
+  margin-top: -20px;
+  cursor: pointer;
+}
+
+.comment-user{
+  font-weight: 600;
+}
+
+.comment-textcontent{
+  line-height:15px;
+  font-weight: 400;
+  
+}
+
+.comment-timestamp{
+
+  font-size:8px;
+}
+
+.comment p {
+  color: #333; /* Text color */
+  border-radius: 15px;
+  padding: 0px 12px;
+  word-wrap: break-word; /* Ensure long words wrap properly */
+  overflow-wrap: break-word; /* Modern alternative for word wrapping */
+  overflow: hidden; /* Prevent any visual overflow */
+  white-space: normal; /* Allow text wrapping */
+  max-width: 100%; /* Ensure it doesn't exceed parent container */
+  flex-shrink: 1; /* Allow shrinking to fit within the container */
+  display: inline-block; /* Ensure it's treated as a block of text */
+  word-break: break-word; /* Break long unbroken words properly */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 600px) {
+  .comment p {
+    font-size: 12px; /* Adjust text size for smaller screens */
+    padding: 6px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .comment-profile {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.comment-actions .div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px; /* Adds space between the buttons */
+}
+
+.comment-actions button {
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-actions button:hover {
+  background-color: #e0e0e0;
+}
+
+.comment-actions button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.saveedit-comment .div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px; /* Adds space between the buttons */
+}
+
+.saveedit-comment .div button{
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saveedit-comment textarea {
+  display: flex;
+  width: 100%;
+  border:none; /* Default border */
+  outline: none;         /* Remove the outline when focused */
+  transition: border 0.3s; /* Smooth transition for border changes */
+  padding: 10px;
+ 
+}
+
+.saveedit-comment textarea:focus{
+  border: none;
+
+}

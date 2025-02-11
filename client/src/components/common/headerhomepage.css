@@ -1,0 +1,353 @@
+/* Navbar styling */
+.homepagenavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  color: black;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
+
+/* Left icon */
+.homepagenavbar .lefticon {
+  text-decoration: none;
+  display: flex;
+}
+
+
+/* Logo */
+.homepagelogo {
+  width: 150px;
+  height: auto;
+}
+
+/* Search container */
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-filter{
+  margin-right: 10px;
+  border: lightgray 1px solid;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  font-size: 10px;
+  width: 80px;
+  z-index: 10000;
+  color: darkgray;
+  text-align: center;
+}
+
+.search-input {
+  height: 30px;
+  margin-top: -10px;
+  width: 42%;
+  padding: 10px;
+  z-index: 10000;
+  border: 1px solid #ccc;
+ border-radius: 35px;
+  margin-right: -2px;
+  position: absolute;
+}
+
+.search-input::placeholder {
+  color: lightgray;
+}
+
+/* Navigation links */
+.icon-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.homepagenav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Icon styling */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Hover animation for icons */
+.nav-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: auto;
+  max-height: 500px;
+  padding: 10px 0;
+  z-index: 1000;
+  display: none;
+  overflow: auto;
+
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+}
+
+
+.dropdown-menu Link{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown-menu button{
+  color: black;
+  background: none;
+  border: none;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown .dropdown-menu {
+  display: block;
+}
+
+/* Notifications dropdown */
+.notifdropdownheader {
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.notification-item {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 10px;
+  height: 50px;
+  overflow: hidden;
+  gap: 10px;
+}
+
+
+.notification-badge{
+  text-align: center;
+  color: white;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  border-radius: 50%;
+  top: 20px;
+  right:65px;
+  background-color: #9D0E0F;
+}
+
+.notification-item:hover{
+background-color: #eaeaea;
+cursor: pointer;
+
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  
+}
+
+.nav-icon{
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.notification-item .notifitemright p {
+  margin: 0;
+  font-size: 12px;
+  color: #333;
+  width: 100%;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  overflow: hidden; /* Hides overflowed text */
+  text-overflow: ellipsis; /* Displays ellipsis (...) for overflowed text */
+  
+}
+
+.notifitemleft{
+  width:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.notifitemright {
+  width: 100%;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  overflow: hidden; /* Hides overflowed text */
+  text-overflow: ellipsis; /* Displays ellipsis (...) for overflowed text */
+}
+
+
+.notifitemleft img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  font-size: 5px;
+  border-radius: 50%;
+  background: none;
+
+}
+
+/* Profile dropdown */
+.profile-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.profile-menu{
+  height: 110px;
+}
+
+
+
+.profile-menu :hover {
+  background-color: #f0f0f0;
+}
+
+/* profile search */
+.search-results {
+  position: fixed;
+  background: white;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 540px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 30px 10px 10px 10px;
+  margin-top: 10px;
+  transition: margin-top 0.3s ease; /* Adds smooth transition when moving down */
+
+}
+
+
+.search-results h3, .recent-searches h3{
+  font-weight: normal;
+  font-size: 10px;
+  color: darkgray;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.search-result-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.search-result-item:hover {
+  background: #f0f0f0;
+}
+
+/* recent search styling */
+.recent-searches {
+  position: absolute;
+  background: white;
+  border: 1px solid #ddd;
+  width: 540px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  left: 50%;
+
+
+  transform: translateX(-50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 30px 10px 10px 10px;
+  margin-top: 10px;
+  transition: margin-top 0.3s ease; /* Adds smooth transition when moving down */
+}
+
+.recent-search-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.recent-search-item strong, .search-results strong{
+  font-weight: normal;
+  color: black;
+  font-size: 12px;
+
+}
+
+
+.recent-search-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.recent-search-item:hover {
+  background: #f0f0f0;
+}
+
+.clear-recent-btn {
+  font-weight: normal;
+  font-size: 10px;
+  color: darkgray;
+  text-decoration: none;
+  border: none;
+  background: none;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+}
+
+.clear-recent-btn:hover {
+  text-decoration: underline;
+}
